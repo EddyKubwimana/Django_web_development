@@ -1,2 +1,2 @@
 # Django_web_development
-development of web application using django framework
+Django is a high-level Python web framework that enables rapid development of secure and maintainable websites. It follows the model-view-controller (MVC) architectural pattern and encourages the use of reusable code. Django includes a built-in administrative interface, as well as support for authentication, form handling, and more. It also integrates well with other technologies such as databases and front-end frameworks. Overall, Django makes it easy for developers to create complex, data-driven websites with minimal effort.
