@@ -1,0 +1,29 @@
+{% extends "blog/base.html" %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% block content %}
+    <div class = "content-section "> 
+        
+        <form method = "POST"> 
+            {% csrf_token %}
+
+            <fieldset class = "form-group">
+                <legend class = "border-bottom mb-4">blog Post</legend>
+                {{form.as_p}}
+            </fieldset>
+            <div class = "form-group">
+                <button class = "btn btn-outline-info" type = "submit"> Post</button>
+            </div>
+        </form>
+
+        <div>
+            <p> Make your first post </p>
+            <p> we are pleased to welcome you</p>
+            <p> We cannot express how grateful we are!</p>
+
+        </div>
+        
+    </div>
+      
+{% endblock content %}
