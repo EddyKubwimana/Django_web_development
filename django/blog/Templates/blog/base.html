@@ -41,9 +41,10 @@
     .content-section {
         background: #ffffff;
         padding: 10px 20px;
-        border: 1px solid #dddddd;
-        border-radius: 3px;
-        margin-bottom: 20px;
+        width: 150%;
+        border: 3px solid #dddddd;
+        border-radius: 10px;
+        margin-bottom: 50px;
     }
     
     .article-title {
@@ -92,7 +93,18 @@
     .account-heading {
         font-size: 2.5rem;
     }
-     </style>
+
+    .footer {
+        position: fixed;
+        left: 0;
+        border-radius: 3%;
+        bottom: 0;
+        width: 100%;
+        background-color:#0d6efd;
+        color: white;
+        text-align: center;
+    
+    </style>
     {% if title %}
       <title> django_blog {{ title}} </title>
     {% else%}
@@ -103,7 +115,6 @@
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
           <div class="container">
-            <a class="navbar-brand mr-4" href="/">Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -111,18 +122,18 @@
               <div class="navbar-nav mr-auto">
                 <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
                 <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
-                <a class="nav-item nav-link" href="{%  url 'blog-post' %}">Posts </a>
+                <a class="nav-item nav-link" href="#">Services</a>
+                <a class="nav-item nav-link" href="{%  url 'blog-post' %}">Blog </a>
 
             </div>
               <!-- Navbar Right Side -->
             <div class="navbar-nav">
               {% if user.is_authenticated %}
                    <a class="nav-item nav-link" href="{% url 'Logout' %}">Logout</a>
-                   <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                   <a class="nav-item nav-link" href="{% url 'Profile' %}">Profile</a>
+                   <a class="nav-item nav-link" href="{% url 'post-create' %}">Create Post</a>
               {% else%}
                   <a class="nav-item nav-link" href="{% url 'Login' %}">Login</a>
-                  <a class="nav-item nav-link" href="{% url 'Register'%}">Register</a>
-               
               {% endif %}
 
       
@@ -147,21 +158,7 @@
 
             {% endif %}
             {% block content %} {% endblock %}
-          </div>
-          <div class="col-md-4">
-            <div class="content-section">
-              <h6>Our Sidebar</h6>
-              <p class='text-muted'>welcome to our blog.
-                <ul class="list-group">
-                  <li class="list-group-item list-group-item-light">Latest Posts</li>
-                  <li class="list-group-item list-group-item-light">Announcements</li>
-                  <li class="list-group-item list-group-item-light">Calendars</li>
-                  <li class="list-group-item list-group-item-light">etc</li>
-                </ul>
-              </p>
-            </div>
-          </div>
-        </div>
+  
       </main>
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -174,6 +171,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
    
-    
+
+      <footer class="footer">
+        <!-- Grid container -->
+      <div class="text-center p-3">
+        © 2022 Copyright:
+        <a class="text-white" href="{% url 'Login'%}">agent-connect</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
