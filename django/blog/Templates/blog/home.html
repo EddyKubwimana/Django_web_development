@@ -1,22 +1,86 @@
 {% extends "blog/base.html" %}
 {% block content %}
-    <section class="container">
-        
-    </section>
-
-    <section class="container">
-        <div class="service">
+<div class="slideshow-container">
+        <div class = "service">
             <h2><a href="#" >Mobile Money</a></h2>
             <p class = 'service-description'>Send and receive money using your mobile phone. Our platform works with all major mobile networks and is available in even the most remote areas.</p>
         </div>
+        <img src="https://i.pinimg.com/originals/94/34/23/94342377eb9a0dc60b422a143c8a52e2.jpg"/>
+        <img src="https://i.pinimg.com/736x/26/42/f9/2642f965fbe99c785061b1721821d986--beautiful-landscapes-beautiful-places.jpg" />
+        <div class="service">
+            <h2><a href = "#" >Bill Payment</a></h2>
+            <p class = 'service-description' >Pay your bills using your mobile phone. Our platform supports a wide range of billers, including utilities, schools, and government agencies.</p>
+        </div>
+        
+        <img src="https://www.worldatlas.com/r/w2000-h1125-q90/upload/9b/af/d4/shutterstock-628999916.jpg" />
+        <div class="service">
+            <h2><a href="#" >Financial Services</a></h2>
+            <p class = 'service-description'>Access a range of financial services, including savings, loans, and insurance. Our platform is designed to help you manage your money and achieve your financial goals.</
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByTagName("img");
+      let dots = document.getElementsByClassName("dot");
+      let texts = document.getElementsByClassName("service")
+
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+
+      setTimeout(showSlides, 3000, (slideIndex += 1));
+    }
+ </script>
+
+</div>
+    <div>
+        <div class = "service">
+            <h2><a href="#" >Mobile Money</a></h2>
+            <p class = 'service-description'>Send and receive money using your mobile phone. Our platform works with all major mobile networks and is available in even the most remote areas.</p>
+        </div>
+
         <div class="service">
             <h2><a href = "#" >Bill Payment</a></h2>
             <p class = 'service-description' >Pay your bills using your mobile phone. Our platform supports a wide range of billers, including utilities, schools, and government agencies.</p>
         </div>
         <div class="service">
             <h2><a href="#" >Financial Services</a></h2>
-            <p class = 'service-description'>Access a range of financial services, including savings, loans, and insurance. Our platform is designed to help you manage your money and achieve your financial goals.</p>
+            <p class = 'service-description'>Access a range of financial services, including savings, loans, and insurance. Our platform is designed to help you manage your money and achieve your financial goals.</
         </div>
-    </section>
+
 
 {% endblock content %}
