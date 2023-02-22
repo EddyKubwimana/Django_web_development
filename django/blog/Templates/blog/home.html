@@ -1,30 +1,25 @@
 {% extends "blog/base.html" %}
 {% block content %}
 <div class="slideshow-container">
-        <div class = "service">
-            <h2><a href="#" >Mobile Money</a></h2>
-            <p class = 'service-description'>Send and receive money using your mobile phone. Our platform works with all major mobile networks and is available in even the most remote areas.</p>
-        </div>
-        <img src="https://i.pinimg.com/originals/94/34/23/94342377eb9a0dc60b422a143c8a52e2.jpg"/>
-        <img src="https://i.pinimg.com/736x/26/42/f9/2642f965fbe99c785061b1721821d986--beautiful-landscapes-beautiful-places.jpg" />
-        <div class="service">
-            <h2><a href = "#" >Bill Payment</a></h2>
-            <p class = 'service-description' >Pay your bills using your mobile phone. Our platform supports a wide range of billers, including utilities, schools, and government agencies.</p>
-        </div>
-        
-        <img src="https://www.worldatlas.com/r/w2000-h1125-q90/upload/9b/af/d4/shutterstock-628999916.jpg" />
-        <div class="service">
-            <h2><a href="#" >Financial Services</a></h2>
-            <p class = 'service-description'>Access a range of financial services, including savings, loans, and insurance. Our platform is designed to help you manage your money and achieve your financial goals.</
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <div class="dot-container">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
+      <div class = "mySlides">
+        <img  src="https://i.pinimg.com/originals/94/34/23/94342377eb9a0dc60b422a143c8a52e2.jpg"/>
+        <div class = "floating-text"><h2><a href="#", style = "color: rgb(52, 50, 50)" >Mobile Money services are key and vital to people in underdeveloped countries, read more ...</a></h2></div>
+      </div>
+      <div class = "mySlides">
+        <img  src="https://i.pinimg.com/originals/19/7f/d9/197fd9f51ec5bc60760868c5574bad28.jpg"/>
+        <div class = "floating-text"><h2><a href="#", style = "color:  rgb(52, 50, 50)" >Agent-Connect is committed to bridge the gap between the banked and unbanked in Burundi, read more ...</a></h2></div>
+      </div>
+      <div class = "mySlides">
+        <img  src="https://i.pinimg.com/originals/18/f1/5e/18f15e25086c15cc12277f660df2073e.jpg"/>
+        <div class = "floating-text"><h2><a href="#", style = "color: rgb(52, 50, 50)" > Our costumers satisfaction is our priority</a></h2></div>
+      </div>   
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+</div >
   <script>
     let slideIndex = 1;
     showSlides(slideIndex);
@@ -39,9 +34,8 @@
 
     function showSlides(n) {
       let i;
-      let slides = document.getElementsByTagName("img");
+      let slides = document.getElementsByClassName("mySlides");
       let dots = document.getElementsByClassName("dot");
-      let texts = document.getElementsByClassName("service")
 
       if (n > slides.length) {
         slideIndex = 1;
@@ -65,22 +59,27 @@
       setTimeout(showSlides, 3000, (slideIndex += 1));
     }
  </script>
+   <div class = "grid-container">
+    <div class = "service">
+        <h2><a href="#" >Cash in & Cash out</a></h2>
+        <p >Send and receive money using your mobile phone. Our platform works with all major mobile networks and is available in even the most remote areas.</p>
+    </div>
+
+    <div class = "service">
+        <h2><a href = "#" >Bill Payment</a></h2>
+        <p>Pay your bills using your mobile phone. Our platform supports a wide range of billers, including utilities, schools, and government agencies.</p>
+    </div>
+    <div class = "service">
+        <h2 ><a href="#" >Financial Services</a></h2>
+        <p>Access a range of financial services, including savings, loans, and insurance. Our platform is designed to help you manage your money and achieve your financial goals as easily as possible.</p>
+    </div>
+
+    <div class = "service">
+      <h2 ><a href="#" >Exchange Electronic or Cash</a></h2>
+      <p >Access a range of financial services, including savings, loans, and insurance. Our platform is designed to help you manage your money and achieve your financial goals.</p>
+  </div>
 
 </div>
-    <div>
-        <div class = "service">
-            <h2><a href="#" >Mobile Money</a></h2>
-            <p class = 'service-description'>Send and receive money using your mobile phone. Our platform works with all major mobile networks and is available in even the most remote areas.</p>
-        </div>
-
-        <div class="service">
-            <h2><a href = "#" >Bill Payment</a></h2>
-            <p class = 'service-description' >Pay your bills using your mobile phone. Our platform supports a wide range of billers, including utilities, schools, and government agencies.</p>
-        </div>
-        <div class="service">
-            <h2><a href="#" >Financial Services</a></h2>
-            <p class = 'service-description'>Access a range of financial services, including savings, loans, and insurance. Our platform is designed to help you manage your money and achieve your financial goals.</
-        </div>
 
 
 {% endblock content %}
