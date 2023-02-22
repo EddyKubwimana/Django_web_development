@@ -8,20 +8,21 @@
      <!-- Bootstrap CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
      <style>
-        body{
+        body, html {
         color: #333333;
         background-color: #e5e7e9;
-        margin-top: 5rem;
-        margin-bottom: 10rem;
-        background-image:url("https://i.pinimg.com/originals/94/34/23/94342377eb9a0dc60b422a143c8a52e2.jpg");
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+        margin-right :0px;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        height : 100%;
-        background-size: cover;
+        align-content: center;
+        font-family: Alliance No\.1,system-ui,-apple-system,Helvetica,Arial,sans-serif;
 
     }
     h1, h2, h3, h4, h5, h6 {
-        color: #444444;
+        color: #2e2020;
     }
     
     ul {
@@ -53,6 +54,9 @@
         border: 3px solid #dddddd;
         border-radius: 10px;
         margin-bottom: 10px;
+        margin-left:0px;
+        margin-right: 0px;
+  
     }
     
     .article-title {
@@ -66,6 +70,7 @@
     
     .article-content {
         white-space: pre-line;
+        font-size: 20px;
     }
     
     .article-img {
@@ -113,17 +118,18 @@
         color: white;
         text-align: center;} 
     .container {
-        width: auto;
-		padding: 10 10px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
-	}
+      width: auto;
+      padding: 10 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+	  }
 
     .about-container{
-        width: auto;
-		padding: 10 10px;
+    width: auto;
+    align-items: center;
+		padding: 10px 10px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -136,22 +142,22 @@
 
 	}
     .service-description {
-        font-size: 36px;
+        font-size: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         color:#444444
     }
 
 
    .service {
-		width:100%;
+		width:auto;
 		background-color: #f4f0f0;
 		padding: 20px;
 		border-radius: 20px;
-		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
 		margin-bottom: 30px;
-		display:inline-flex;
-		flex-direction:column;
+    margin-left : 200%;
 		align-items: center;
 		text-align: left;
+    margin-left: 20px
 	}
     a{
         text-decoration: none;
@@ -164,19 +170,20 @@
 	}
 
 	.service p {
-		font-size: 16px;
+		font-size: 20px;
 		margin: 0;
 		margin-bottom: 20px;
 		line-height: 1.5;
+    text-align: left;
 	}
 
     .slideshow-container {
-        max-width: 100%;
+        max-width: auto;
         position:relative;
-        margin-left: 0;
-        margin-top: 0;
-        margin-right: 0;
-        margin-bottom: 0;
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
       }
 
       .slideshow-container img {
@@ -184,42 +191,35 @@
         width: 150%;
         border: 0px solid #dddddd;
         border-radius: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
+        height:600px
       }
 
-      .prev, .next {
-        position:relative;
-        top: auto;
-        font-size: 18px;
-        font-weight: bold;
-        padding: 12px 16px;
-        margin-top: -22px;
-        border-radius: 0 3px 3px 0;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        cursor: pointer;
-      }
+      .floating-text {
+			position: relative;
+			top: -350px;
+			left: 70%;
+      text-align: justify;
+			transform: translate(-50%, -50%);
+      background-color:rgba(255, 255, 255, 0.5);
+      
+			padding: 20px;
+			border-radius: 5px;
+			font-size: 24px;
+			font-weight: bold;}
+      
 
-      .prev {
-        left: 0;
-        border-radius: 3px 0 0 3px;
-      }
-
-      .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-      }
-
-      .dot-container {
-        text-align: center;
-        margin-top: 20px;
-      }
+      .mySlides {
+			display:auto;
+			height: auto;
+			width:auto;
+			text-align: center;}
 
       .dot {
         display: inline-block;
-        height: 10px;
+        height: 1px;
         width: 10px;
-        margin: 0 5px;
+        margin: 0 0px;
         border-radius: 50%;
         background-color: #bbb;
         cursor: pointer;
@@ -229,7 +229,64 @@
       .active, .dot:hover {
         background-color: #717171;
       }
-    
+
+      .grid-container {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-top: auto;
+        width: 150%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        column-gap: 30px;
+      }
+     
+      .container-team {
+
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-top: auto;
+        width: auto;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        column-gap: 20px;
+
+        align-items: center;
+			
+		}
+
+		.card {
+			width: auto;
+			margin-bottom: 30px;
+			text-align: center;
+			padding: 20px;
+			border-radius: 10px;
+      background-color: #e5e7e9;
+		}
+
+		.card:hover {
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		}
+
+		.card img {
+			border-radius: 50%;
+			width: auto;
+			height: auto;
+			margin-bottom: 20px;
+		}
+
+		.card h2 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		.card p {
+			font-size: 18px;
+			margin-bottom: 20px;
+			line-height: 1.5;
+		}
+
 
     </style>
     {% if title %}
@@ -251,7 +308,8 @@
                 <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
                 <a class="nav-item nav-link" href="#">Services</a>
                 <a class="nav-item nav-link" href="{%  url 'blog-post' %}">Blog </a>
-
+                <a class="nav-item nav-link" href="{%  url 'team' %}">Team </a>
+                
             </div>
               <!-- Navbar Right Side -->
             <div class="navbar-nav">
